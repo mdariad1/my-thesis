@@ -1,0 +1,7 @@
+<h2>Teacher Dashboard</h2>
+<ul>
+  <li *ngFor="let thesis of theses">
+    {{ thesis.title }} - Proposed by {{ thesis.proposer }}
+  </li>
+</ul>
+<router-outlet></router-outlet>

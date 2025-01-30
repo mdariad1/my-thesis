@@ -1,0 +1,8 @@
+<h2>Student Dashboard</h2>
+<ul>
+  <li *ngFor="let thesis of theses">
+    {{ thesis.title }} - {{ thesis.proposer }}
+    <button (click)="sendThesis(thesis)">Send</button>
+  </li>
+</ul>
+<router-outlet></router-outlet>

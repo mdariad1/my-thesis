@@ -1,0 +1,25 @@
+<div class="thesis-container">
+  <h2>Submit Thesis</h2>
+  <form [formGroup]="thesisForm" (ngSubmit)="submitThesis()">
+    
+    <label>Title</label>
+    <input type="text" formControlName="title">
+    <div *ngIf="thesisForm.controls['title'].invalid && thesisForm.controls['title'].touched" class="error">
+      Title is required.
+    </div>
+
+    <label>Description</label>
+    <textarea formControlName="description"></textarea>
+    <div *ngIf="thesisForm.controls['description'].invalid && thesisForm.controls['description'].touched" class="error">
+      Description is required.
+    </div>
+
+    <label>Supervisor</label>
+    <input type="text" formControlName="supervisor">
+    <div *ngIf="thesisForm.controls['supervisor'].invalid && thesisForm.controls['supervisor'].touched" class="error">
+      Supervisor is required.
+    </div>
+
+    <button type="submit" [disabled]="thesisForm.invalid">Submit</button>
+  </form>
+</div>

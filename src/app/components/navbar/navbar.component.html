@@ -1,0 +1,7 @@
+<nav class="navbar">
+    <a routerLink="/student/student01" *ngIf="userType === 'student'">Student Dashboard</a>
+    <a routerLink="/teacher/teacher01" *ngIf="userType === 'teacher'">Teacher Dashboard</a>
+    <a routerLink="/thesis" *ngIf="userType === 'student'">Submit Thesis</a>
+    <a routerLink="/login" (click)="logout()">Logout</a>
+  </nav>
+  
